@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "976a7336-a763-49e6-987b-244cda758274",
+		"name": "assignment8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26661397"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"userName\": {\r\n        \"firstName\": \"yasser\",\r\n        \"secondName\": \"amr\"\r\n    },\r\n \"email\":\"yasser2@gmail.com\",\r\n \"passwordHashed\":\"123446\",\r\n \"age\":\"25\", \r\n \"gender\":\"male\",\r\n \"phone\":\"1235666889\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"yasser2@gmail.com\",\r\n  \"passwordHashed\":\"123446\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWNlNjljM2I3N2ZmN2M1MGE0M2EzOCIsImVtYWlsIjoieWFzc2VyMkBnbWFpbC5jb20iLCJpYXQiOjE3MDU4MzAwOTgsImV4cCI6MTcwNTgzMzY5OH0.aTuiJEcIJjJySgss8S6Sd0A6emil4EYYhyAvi0XCvx0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": {\r\n        \"firstName\": \"john\",\r\n        \"secondName\": \"deer\"\r\n    },\r\n \"age\":\"23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update paasword",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTUyOTMwMjZiN2FlNmVmOTM5N2QwOCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJpYXQiOjE3MDUzNjcxMTcsImV4cCI6MTcwNTM3MDcxN30.HZ0SlireBd1q8lha99SF5viWgPdLra2xYLmD59pJpac",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"passwordHashed\":\"235678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/pass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTUyOTMwMjZiN2FlNmVmOTM5N2QwOCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJpYXQiOjE3MDUzNjMyODAsImV4cCI6MTcwNTM2Njg4MH0.5TForzdI6QlFHbVL6vTWbI8SKeceMN0DHDN3EJGb-Qc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload pic local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "shahd",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/C:/Users/Shahd/Downloads/Natural- 50-Cloud-Aesthetic-Wallpapers-For-iPhone-2023-phone-iphone wallpaper aesthetics background.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload pic cloud",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "shahd",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/C:/Users/Shahd/Downloads/Natural- 50-Cloud-Aesthetic-Wallpapers-For-iPhone-2023-phone-iphone wallpaper aesthetics background.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/uploadCloud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"uploadCloud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWEzZGFjMGNkNWRlZjhkMDViYzNlYSIsImVtYWlsIjoieWFzc2VyQGdtYWlsLmNvbSIsImlhdCI6MTcwNTY1NTc1OSwiZXhwIjoxNzA1NjU5MzU5fQ.-UHZWcd7ql8zcQ5AxN6kHNCGkX_tqzFp6O4T2r6Pw5M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete soft",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWEzZTg4MGNkNWRlZjhkMDViYzNmMyIsImVtYWlsIjoieWFzc2VyQGdtYWlsLmNvbSIsImlhdCI6MTcwNTY1NTk1MCwiZXhwIjoxNzA1NjU5NTUwfQ.m6uir0aOYRyt53Oox9idnd6ijKNMUQv59VTINXFu5_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/soft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"soft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy folder",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTUyOTMwMjZiN2FlNmVmOTM5N2QwOCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJpYXQiOjE3MDU3OTI2OTQsImV4cCI6MTcwNTc5NjI5NH0.f88Iuv4024W6A4DkrJWxlxePGktYpMl6QrY6zoRohiE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/destroyCloud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"destroyCloud"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "add task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTUyOTMwMjZiN2FlNmVmOTM5N2QwOCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJpYXQiOjE3MDU2NjUwMzYsImV4cCI6MTcwNTY2ODYzNn0.IfEXBxUYSpgHRghKiFaDn9InS3ddN1X0hN3ldw0falk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"title4\",\r\n    \"description\": \"d4\",\r\n    \"status\": \"done\",\r\n    \"assignTo\": \"65a5293026b7ae6ef9397d08\",\r\n    \"deadline\": \"2023-03-20\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTUyOTMwMjZiN2FlNmVmOTM5N2QwOCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJpYXQiOjE3MDU2MTU5NTAsImV4cCI6MTcwNTYxOTU1MH0.IqFsZcZxp8kgGnGrbggjliAgjPXyN3VAW861j52BVbo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"title1\",\r\n    \"description\": \"d1\",\r\n    \"status\": \"toDo\",\r\n    \"assignTo\": \"65a3ab5b695c5143f0122a50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task/65a5eefa676f3d08cb3b459b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"65a5eefa676f3d08cb3b459b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTUyOTMwMjZiN2FlNmVmOTM5N2QwOCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJpYXQiOjE3MDU2NTM3NDEsImV4cCI6MTcwNTY1NzM0MX0._AZ258oAENc8KJLJdHBPbUxPEvisXL6uWzileoKnD88",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/task/65aa3633a1a6f63908e2c491",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"65aa3633a1a6f63908e2c491"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getalltasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/task/allTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"allTasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "taskofoneuser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTUyOTMwMjZiN2FlNmVmOTM5N2QwOCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJpYXQiOjE3MDU2NTM3NDEsImV4cCI6MTcwNTY1NzM0MX0._AZ258oAENc8KJLJdHBPbUxPEvisXL6uWzileoKnD88",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/task/task1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"task1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "after deadline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/task/after",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"after"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
